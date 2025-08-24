@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Script  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- tailwind CSS -->
+    <link rel="stylesheet" href="styles/tailwind.css" />
+  </head>
+  <body
+    class="bg-[#F4F5F7] h-[100vh] flex flex-col justify-center items-center"
+  >
+    <div
+      class="w-[300px] h-[130px] bg-[url(./assets/bg.png)] bg-cover flex justify-center items-center"
+    >
+      <img src="assets/Group.png" alt="" />
+    </div>
+
+    <form class="w-[340px] bg-white p-5 rounded-2xl">
+      <div class="mt-5">
+        <label for="">Mobile Number</label>
+        <br />
+        <input
+          id="mobile-number"
+          type="text"
+          placeholder="Enter your mobile number"
+          class="input bg-[#f4f5f7]"
+        />
+      </div>
+
+      <div class="mt-5">
+        <label for="">4 Digit Pin</label>
+        <br />
+        <input
+          type="text"
+          id="pin-number"
+          placeholder="Enter your 4 digit pin "
+          class="input bg-[#f4f5f7]"
+        />
+        <button
+          type="button"
+          id="btn-login"
+          class="btn btn-primary w-full mt-5"
+        >
+          Login
+        </button>
+      </div>
+    </form>
+
+    <script src="styles/script.js"></script>
+  </body>
+</html>

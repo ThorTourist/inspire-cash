@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Script  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- tailwind CSS -->
+    <link rel="stylesheet" href="styles/tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#f4f5f7] h-[100vh]">
+    <!-- nav bar -->
+    <div
+      class="border-b-2 border-gray-400 min-h-[84px] max-w-lg mx-auto flex justify-between items-center px-5"
+    >
+      <div class="flex justify-center items-center">
+        <img src="assets/Group.png" alt="" />
+        <div>
+          <h1 class="font-bold">$<span id="available-balance">45000</span></h1>
+          <p>Available Balence</p>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-outline">
+          <i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log Out
+        </button>
+      </div>
+    </div>
+    <!-- welcom banner -->
+    <div class="max-w-lg mx-auto m-8 px-5">
+      <h1 class="text-2xl font-bold">🔥 Welcome to Payooo!</h1>
+      <p>
+        Enjoy easy and convenient financial services with us. Cashout charge is
+        low and
+      </p>
+    </div>
+
+    <!-- card section -->
+    <div class="min-h-200px max-w-lg mx-auto grid grid-cols-3 gap-3 p-2 my-2">
+      <div
+        id="add-money-button"
+        class="bg-white border-2 border-gray-300 text-center p-5 rounded-3xl"
+      >
+        <img src="assets/wallet1.png" class="mx-auto" alt="" />
+        <h2>Add Money</h2>
+      </div>
+      <div
+        id="cash-out-button"
+        class="bg-white border-2 border-gray-300 text-center p-5 rounded-3xl"
+      >
+        <img src="assets/send1.png" class="mx-auto" alt="" />
+        <h2>Cash Out</h2>
+      </div>
+      <div
+        class="bg-white border-2 border-gray-300 text-center py-5 px-2 rounded-3xl"
+      >
+        <img src="assets/money1.png" class="mx-auto" alt="" />
+        <h2 class="text-sm">Transfer Money</h2>
+      </div>
+      <div
+        class="bg-white border-2 border-gray-300 text-center p-5 rounded-3xl"
+      >
+        <img src="assets/bonus1.png" class="mx-auto" alt="" />
+        <h2>Get Bonus</h2>
+      </div>
+      <div
+        class="bg-white border-2 border-gray-300 text-center p-5 rounded-3xl"
+      >
+        <img src="assets/purse1.png" class="mx-auto" alt="" />
+        <h2>Pay Bills</h2>
+      </div>
+      <div
+        class="bg-white border-2 border-gray-300 text-center p-5 rounded-3xl"
+      >
+        <img src="assets/transaction1.png" class="mx-auto" alt="" />
+        <h2>Transdaction</h2>
+      </div>
+    </div>
+
+    <!-- form section -->
+
+    <div class="bg-[#f4f5f7] max-w-lg mx-auto mt-7 mb-9 p-5">
+      <!-- add money form  -->
+      <div id="add-money-form" style="display: none">
+        <h1>Add Money</h1>
+
+        <form class="mt-5 mb-3">
+          <div>
+            <h1>Select A Bank</h1>
+            <select id="bank" class="select w-full bg-white rounded-3xl">
+              <option disabled selected>Select Bank</option>
+              <option>AB Bank</option>
+              <option>DBBL</option>
+              <option>iNSPiRE Bank</option>
+              <option>Sonali Bank</option>
+            </select>
+          </div>
+          <div class="mt-5">
+            <label for="">Account Number</label>
+            <br />
+            <input
+              id="account-number"
+              type="text"
+              placeholder="Enter your 11 digit bank Account number"
+              class="input w-full bg-white rounded-3xl"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="">Amount to add</label>
+            <br />
+            <input
+              id="add-amount"
+              type="text"
+              placeholder="Enter your amount to add"
+              class="input w-full bg-white rounded-3xl"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="">Enter your Pin number</label>
+            <br />
+            <input
+              id="add-pin"
+              type="text"
+              placeholder="Enter your pin number"
+              class="input w-full bg-white rounded-3xl"
+            />
+          </div>
+        </form>
+        <button
+          type="button"
+          id="add-money-btn"
+          class="btn bg-blue-800 text-white font-bold w-full mt-5 mb-9 rounded-3xl"
+        >
+          Add Money
+        </button>
+      </div>
+
+      <!-- cash out money  -->
+      <div id="cash-out-form" style="display: none">
+        <h1>Cash Out</h1>
+
+        <form class="mt-5 mb-3">
+          <div class="mt-5">
+            <label for="">Agent Number</label>
+            <br />
+            <input
+              id="agent-number"
+              type="text"
+              placeholder="Enter your agent number"
+              class="input w-full bg-white rounded-3xl"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="">Amount to cash out</label>
+            <br />
+            <input
+              id="cash-out-amount"
+              type="text"
+              placeholder="Enter your amount to cash out"
+              class="input w-full bg-white rounded-3xl"
+            />
+          </div>
+          <div class="mt-5">
+            <label for="">Enter your Pin number</label>
+            <br />
+            <input
+              id="cash-out-pin"
+              type="text"
+              placeholder="Enter your pin number"
+              class="input w-full bg-white rounded-3xl"
+            />
+          </div>
+        </form>
+        <button
+          type="button"
+          id="withdraw-money-btn"
+          class="btn bg-blue-800 text-white font-bold w-full mt-5 mb-9 rounded-3xl"
+        >
+          Withdraw Money
+        </button>
+      </div>
+    </div>
+    <script src="styles/home.js"></script>
+  </body>
+</html>
