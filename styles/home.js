@@ -29,6 +29,8 @@ document
 
     document.getElementById("available-balance").innerText =
       newAvailableBalance;
+
+    document.getElementById("add-money-form").style.display = "none";
   });
 
 // cash out functionality
@@ -62,7 +64,10 @@ document
 
     document.getElementById("available-balance").innerText =
       newAvailableBalance;
+
+    document.getElementById("add-money-form").style.display = "none";
   });
+
 // toggling features
 
 document
