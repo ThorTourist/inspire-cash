@@ -83,3 +83,11 @@ document
     document.getElementById("add-money-form").style.display = "none";
     document.getElementById("cash-out-form").style.display = "block";
   });
+
+// log out functionality
+
+document.getElementById("log-out-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  window.location.href = "./index.html";
+});
